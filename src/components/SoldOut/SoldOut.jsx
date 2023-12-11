@@ -19,7 +19,7 @@ const SoldOut = () => {
           <SliderButtons />
           {data.map((card, i) => (
             <SwiperSlide key={i}>
-              <div className="flexColStart r-card">
+              <div className="flexColStart s-card">
                 <img src={card.image} alt="home" />
               </div>
             </SwiperSlide>

@@ -5,10 +5,10 @@ const GetStarted = () => {
     <section className="g-wrapper">
       <div className="paddings innerWidth g-container">
         <div className="flexColCenter inner-container">
-          <span className="primaryText">Get Started with VSV Realty</span>
+          <span className="primaryText">Get Started and List with VSV Realty</span>
           <span className="thirdText">
             Begin your journey to extraordinary living with VSV Realty. <br />{" "}
-            Explore our innovative projects and turn your dream home into a
+            Explore our innovative projects and list it for turn your dream home into a
             reality.
           </span>
           <button className="button">

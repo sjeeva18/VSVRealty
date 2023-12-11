@@ -17,9 +17,23 @@
   scroll-behavior: smooth;
 }
 
+.wrapper {
+  background-color: white;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.e-container {
+  gap: 1.5rem;
+  background: rgb(32, 32, 32);
+  box-shadow: 0 10px 20px rgb(116, 116, 116);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 6px solid #393939;
+  text-align: center;
 }
 
 .paddings {
@@ -73,6 +87,12 @@ a {
 
 .primaryText {
   color: #1f3e72;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.enquiryText {
+  color: white;
   font-weight: bold;
   font-size: 1.5rem;
 }

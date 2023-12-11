@@ -2,32 +2,51 @@ import React from "react";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
 import "./Properties.css";
-import data from "../../utils/slider.json";
 import { sliderSettings } from "../../utils/common";
+import PropertyCard from "../PropertyCard/PropertyCard";
+import useResidencies from "../../hooks/useResidencies";
+import { PuffLoader } from "react-spinners";
+import { NavLink } from "react-router-dom";
 const Properties = () => {
+  const { data, isError, isLoading } = useResidencies();
+
+  if (isError) {
+    return (
+      <div className="wrapper">
+        <span>Error while fetching data</span>
+      </div>
+    );
+  }
+
+  if (isLoading) {
+    return (
+      <div className="wrapper flexCenter" style={{ height: "60vh" }}>
+        <PuffLoader
+          height="80"
+          width="80"
+          radius={1}
+          color="#4066ff"
+          aria-label="puff-loading"
+        />
+      </div>
+    );
+  }
+
   return (
     <section className="r-wrapper">
       <div className="paddings innerWidth r-container">
         <div className="r-head flexColStart">
           <span className="orangeText">Best Choices</span>
-          <span className="primaryText">Popular Apartments</span>
+          <NavLink to="/residencies">
+            <span className="primaryText">Popular Apartments</span>
+          </NavLink>
         </div>
 
         <Swiper {...sliderSettings}>
           <SliderButtons />
-          {data.map((card, i) => (
+          {data.slice(0, 4).map((card, i) => (
             <SwiperSlide key={i}>
-              <div className="flexColStart r-card">
-                <img src={card.image} alt="home" />
-
-                <span className="thirdText r-price">
-                  <span style={{ color: "goldenrod" }}>Rs.</span>
-                  <span>{card.price}</span>
-                </span>
-
-                <span className="primaryText">{card.name}</span>
-                <span className="thirdText">{card.detail}</span>
-              </div>
+              <PropertyCard card={card} />
             </SwiperSlide>
           ))}
         </Swiper>

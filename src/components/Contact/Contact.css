@@ -66,3 +66,16 @@
   color: white;
   scale: 0.8;
 }
+
+.cimage-container {
+  box-shadow: 10px 10px 20px rgb(116, 116, 116);
+  border: 5px solid #fff;
+  width: 450px;
+  height: 550px;
+  overflow: hidden;
+}
+
+.cimage-container img {
+  width: 100%;
+  height: 100%;
+}

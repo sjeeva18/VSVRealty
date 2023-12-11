@@ -1,6 +1,5 @@
 import React from "react";
 import "./Hero.css";
-import { HiLocationMarker } from "react-icons/hi";
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
 const Hero = () => {
@@ -8,7 +7,7 @@ const Hero = () => {
     <section className="hero-wrapper">
       <div className="paddings innerWidth flexCenter hero-container">
         {/* left side */}
-        <dev className="flexColStart hero-left">
+        <div className="flexColStart hero-left">
           <div className="hero-title">
             <motion.h1
               initial={{ y: "2rem", opacity: 0 }}
@@ -32,12 +31,6 @@ const Hero = () => {
             </span>
           </div>
 
-          <div className="flexCenter search-bar">
-            <HiLocationMarker color="var(--blue)" size={25} />
-            <input type="text" />
-            <button className="button">Search</button>
-          </div>
-
           <div className="flexCenter stats">
             <div className="flexColCenter stat">
               <span>
@@ -47,7 +40,7 @@ const Hero = () => {
               </span>
             </div>
           </div>
-        </dev>
+        </div>
         {/* right side */}
         <div className="flexCenter hero-right">
           <motion.div
@@ -57,7 +50,7 @@ const Hero = () => {
               duration: 2,
               type: "spring",
             }}
-            className="image-container"
+            className="flexCenter image-container"
           >
             <img src="./enddaylight.jpg" alt="" />
           </motion.div>

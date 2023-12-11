@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import "./Header.css";
 import { BiMenuAltRight } from "react-icons/bi";
 import OutsideClickHandler from "react-outside-click-handler";
+import { Link, NavLink } from "react-router-dom";
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
 
-  const getMenuStlyes = (menuOpened) => {
+  const getMenuStyles = (menuOpened) => {
     if (document.documentElement.clientWidth <= 800) {
       return { right: !menuOpened && "-100%" };
     }
@@ -13,20 +14,21 @@ const Header = () => {
   return (
     <section className="h-wrapper">
       <div className="flexCenter paddings innerWidth h-container">
-        <img src="./PhotoRoom-20230831_001856.png" alt="logo" width={100} />
+        <Link to="/">
+          <img src="./PhotoRoom-20230831_001856.png" alt="logo" width={100} />
+        </Link>
 
         <OutsideClickHandler
           onOutsideClick={() => {
             setMenuOpened(false);
           }}
         >
-          <div className="flexCenter h-menu" style={getMenuStlyes(menuOpened)}>
-            <a href="">Properties</a>
-            <a href="">Our Value</a>
-            <a href="">Contact Us</a>
-            <a href="">Get Started</a>
+          <div className="flexCenter h-menu" style={getMenuStyles(menuOpened)}>
+            <NavLink to="/residencies">Residencies</NavLink>
+            <NavLink to="/lands">Lands</NavLink>
+            <NavLink to="/aboutus">About Us</NavLink>
             <button className="button">
-              <a href="">Contact</a>
+              <a href="tel:8190038839">Contact</a>
             </button>
           </div>
         </OutsideClickHandler>

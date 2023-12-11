@@ -2,7 +2,6 @@ import React from "react";
 import "./Contact.css";
 import { MdCall, MdMail } from "react-icons/md";
 import { BsFillChatDotsFill } from "react-icons/bs";
-import { HiChatBubbleBottomCenter } from "react-icons/hi2";
 const Contact = () => {
   return (
     <section className="c-wrapper">
@@ -29,7 +28,9 @@ const Contact = () => {
                     <span className="thirdText">+91 81900 38839</span>
                   </div>
                 </div>
-                <div className="flexCenter button">Call Now</div>
+                <div className="flexCenter button">
+                  <a href="tel:8190038839">Call Now</a>
+                </div>
               </div>
 
               {/*second mode */}
@@ -43,7 +44,9 @@ const Contact = () => {
                     <span className="thirdText">+91 81900 38839</span>
                   </div>
                 </div>
-                <div className="flexCenter button">Chat Now</div>
+                <div className="flexCenter button">
+                  <a href="https://wa.me/8190038839">Chat Now</a>
+                </div>
               </div>
 
               {/*third mode*/}
@@ -58,7 +61,9 @@ const Contact = () => {
                       <span className="thirddText">vsvreality@gmail.com</span>
                     </div>
                   </div>
-                  <div className="flexCenter button">Mail Now</div>
+                  <div className="flexCenter button">
+                    <a href="mailto:vsvreality@gmail.com">Mail Now</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -67,7 +72,7 @@ const Contact = () => {
 
         {/* right side */}
         <div className="flexCenter c-right">
-          <div className="image-container">
+          <div className="cimage-container">
             <img src="./5f4fc83bb484476a40e95960_1599064123104.png" alt="" />
           </div>
         </div>

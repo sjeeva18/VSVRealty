@@ -6,7 +6,7 @@
 }
 
 .hero-container {
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-end;
 }
 
@@ -58,8 +58,8 @@
 .image-container {
   box-shadow: 10px 10px 20px rgb(116, 116, 116);
   border: 5px solid #fff;
-  width: 450px;
-  height: 550px;
+  width: 350px;
+  height: 400px;
   overflow: hidden;
 }
 

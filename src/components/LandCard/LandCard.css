@@ -1,4 +1,4 @@
-.s-card {
+.l-card {
   gap: 0.6rem;
   padding: 2.5rem;
   border-radius: 10px;
@@ -8,18 +8,27 @@
   z-index: 0;
 }
 
-.s-card > img {
+.l-card > img {
   width: 15rem;
-  height: 20rem;
+  height: 10rem;
   border-radius: 10px;
 }
 
-.s-card > :nth-child(1) {
+.l-card > :nth-child(2) {
   font-size: 1.2rem;
   font-weight: 600;
 }
 
-.s-card:hover {
+.l-card > :nth-child(3) {
+  font-size: 1.5rem;
+}
+
+.l-card > :nth-child(4) {
+  font-size: 0.7rem;
+  width: 15rem;
+}
+
+.l-card:hover {
   scale: 1.025;
   cursor: pointer;
   background: linear-gradient(
