@@ -48,7 +48,7 @@ const Footer = () => {
             <NavLink to="/residencies">Residencies</NavLink>
             <NavLink to="/lands">Lands</NavLink>
             <NavLink to="/aboutus">About Us</NavLink>
-            <a href="Mailto:vsvreality@gmail.com">Contact</a>
+            <a href="mailto:vsvreality@gmail.com">Contact</a>
           </div>
         </div>
       </div>
